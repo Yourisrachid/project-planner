@@ -7,11 +7,15 @@ footer{
     height: auto;
     z-index: 10;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     background-color: rgba($color: #000000, $alpha: 0.1);
-    td{
-        justify-content: center;
-    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }    
+    
 }
 main{
     height: 85dvh;
