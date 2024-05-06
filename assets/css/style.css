@@ -1,1 +1,81 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+header #logo {
+  width: 30%;
+}
+header .darkModeDiv {
+  font-size: 24px;
+  cursor: pointer;
+  caret-color: transparent;
+  display: block;
+  align-items: center;
+  /* If checked, show the checked image */
+  /* If checked, hide the unchecked image */
+}
+header .darkModeDiv img {
+  max-height: 30px;
+  height: 85%;
+}
+header .darkModeDiv input {
+  display: none;
+}
+header .darkModeDiv .img-checked {
+  display: none;
+}
+header .darkModeDiv input:checked ~ .img-checked {
+  display: inline;
+}
+header .darkModeDiv input:checked ~ .img-unchecked {
+  display: none;
+}
+
+body {
+  background-color: rgb(196, 233, 255);
+}
+
+footer {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+footer nav {
+  margin-bottom: 5%;
+}
+
+body.darkmode {
+  background: rgb(6, 2, 17);
+  background: radial-gradient(circle, rgb(6, 2, 17) 15%, rgb(0, 0, 0) 73%);
+  background-repeat: no-repeat;
+  color: wheat;
+}
+body.darkmode header {
+  background-color: rgb(32, 33, 36);
+  color: white;
+}
+body.darkmode header img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(269deg) brightness(103%) contrast(103%);
+}
+body.darkmode footer {
+  background-color: rgb(32, 33, 36);
+  color: white;
+}
+body.darkmode footer img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(269deg) brightness(103%) contrast(103%);
+}/*# sourceMappingURL=style.css.map */
