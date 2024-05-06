@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer type="module" src="assets/js/script.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Project Planner</title>
 </head>
 <body>
-    
+    <input type="text" id="taskInput" placeholder="Nom de la tâche">
+    <input type="text" id="taskDescription" placeholder="Description de la tâche">
+    <button onclick="addTask()">Ajouter</button>
+
+    <h2>To Do</h2>
+    <ul id="todoList"></ul>
+
+    <h2>In Progress</h2>
+    <ul id="inProgressList"></ul>
+
+    <h2>Done</h2>
+    <ul id="doneList"></ul>
+
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
