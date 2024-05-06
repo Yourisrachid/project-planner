@@ -1,72 +1,38 @@
 header{
     width: 100%;
-    height: 5dvh;
+    height: 6dvh;
     position: fixed;
     z-index: 10;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.2);
 
     .darkModeDiv {
-        z-index: 11;
-        position:absolute;
-        top:30%;
-        right:2%;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 1fr;
+        font-size: 24px;
+	    cursor: pointer;
+        caret-color: transparent;
+	    display: block;
         align-items: center;
-        justify-content: center;
-        width: auto;
-        max-width: 120px;
-
-        input {
-            justify-self: center;
+        img{
+            max-height: 30px;
+            height: 85%;
         }
-
-        img {
-            max-height: 15px;
+        input{
+            display: none;
         }
-        
+        .img-checked {
+            display: none;
+        }
+        /* If checked, show the checked image */
+        input:checked ~ .img-checked {
+	        display: inline;
+        }
+        /* If checked, hide the unchecked image */
+        input:checked ~ .img-unchecked {
+	        display: none;
+        }    
     }
-    .theme__toggle,
-    .theme__toggle:before {
-        display: block;
-    }
-
-    .theme__toggle {
-        background-color: rgba(255, 255, 255, 0.40);
-        border-radius: 25% / 50%;
-        box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.55);
-        padding: 0.05em;
-        width: 1.2em;
-        height: 0.6em;
-        -webkit-appearance: none;
-        appearance: none;
-    }
-
-    .theme__toggle:before {
-        background-color: $colorBackground;
-        border-radius: 50%;
-        content: "";
-        width: 50%;
-        height: 100%;
-    }
-
-    /* Checked */
-    .theme__toggle:checked {
-        /* modifie background color */
-        background-color: rgba(255, 255, 255, 0.40);
-    }
-
-    .theme__toggle:checked:before,
-    .theme__toggle:checked ~ .theme__icon {
-        /* move the circle */
-        transform: translate(0.5em);
-    }
-
-    .theme__toggle:checked:before {
-        /* change circle color */
-        background-color: $colorBackground;
-    }
+    
 
 }
