@@ -7,7 +7,20 @@
     <title>Project Planner</title>
 </head>
 <body>
-    <input type="text" id="taskInput" placeholder="Nom de la tâche">
+    <header>
+        <img id="logo" src="assets/img/logo.svg" alt="ProPlan Logo">
+        <label class="darkModeDiv">
+            <label for="theme" class="container"></label>
+            <input id="dark-mode-toggle" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+             <img class="img-unchecked" src="assets\img\sun.svg" alt="sun icon" height="50px">
+            <img class="img-checked" src="assets\img\moon.svg" alt="moon icon" height="50px">
+        </label> 
+    </header>
+
+    <main>
+
+
+      <input type="text" id="taskInput" placeholder="Nom de la tâche">
     <input type="text" id="taskDescription" placeholder="Description de la tâche">
     <button onclick="addTask()">Ajouter</button>
 
@@ -20,6 +33,22 @@
     <h2>Done</h2>
     <ul id="doneList"></ul>
 
+   
+
+ </main>
+    <footer>
+
+        <nav>
+            <a href="https://github.com/lynekpng" target="_blank">Lyne</a>
+            <a href="https://github.com/Yourisrachid" target="_blank">Youris</a>
+            <a href="https://github.com/isab95" target="_blank">Isabelle</a>
+        </nav>
+
+        <a href="https://github.com/Yourisrachid/project-planner" target="_blank">
+            <img src="assets/img/github.svg" alt="github logo">
+        </a>
+
+    </footer> 
     <script src="assets/js/script.js" defer></script>
 </body>
 </html>

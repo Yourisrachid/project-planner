@@ -1,4 +1,7 @@
+import { darkMode } from './darkmode.js';
 
+
+darkMode();
 let todoTasks = [];
 let inProgressTasks = [];
 let doneTasks = [];
