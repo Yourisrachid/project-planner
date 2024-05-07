@@ -73,6 +73,8 @@ export function task() {
 
         function renderTodoList() {
 
+            todoList.innerHTML = "";
+
             toDo.forEach(task => {
 
                 const taskDiv = document.createElement("div");

@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 ul{ list-style:none; 
     padding-left:20px;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
 }
+=======
+>>>>>>> dev
 
 .task-item{
     margin: auto;
     
     background-color: red;
+<<<<<<< HEAD
     max-height: 500px;
     max-width: 400px;
     width: 90%;
@@ -17,4 +21,9 @@ ul{ list-style:none;
     h3{
         align-self: center;
     }
+=======
+    border-radius: 20px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+>>>>>>> dev
 }
