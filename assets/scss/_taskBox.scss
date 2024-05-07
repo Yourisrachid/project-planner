@@ -1,11 +1,20 @@
-ul{margin-right: 45px;}
+ul{ list-style:none; 
+    padding-left:20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .task-item{
+    margin: auto;
+    
     background-color: red;
     max-height: 500px;
     max-width: 400px;
+    width: 90%;
     border-radius: 20px;
-    // width: 90%;
-    // max-width: 350px;
-    // margin: 5px;
-    // padding: auto;
+    padding: 3px 15px;
+    h3{
+        align-self: center;
+    }
 }
