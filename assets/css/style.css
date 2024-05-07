@@ -5,14 +5,19 @@ body {
 
 header {
   width: 100%;
-  height: 100px;
+  height: 10dvh;
+  min-height: 70px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
 }
 header #logo {
   width: 30%;
+  max-width: 175px;
+  min-width: 100px;
+  padding-left: 25px;
+  max-height: 85%;
 }
 header .darkModeDiv {
   font-size: 24px;
@@ -20,6 +25,7 @@ header .darkModeDiv {
   caret-color: transparent;
   display: block;
   align-items: center;
+  padding-right: 25px;
   /* If checked, show the checked image */
   /* If checked, hide the unchecked image */
 }
@@ -45,37 +51,98 @@ body {
 }
 
 footer {
-  min-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1);
-  padding-top: 10%;
-  padding-bottom: 10%;
+  max-height: 17.5dvh;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 footer nav {
-  margin-bottom: 5%;
+  width: 50%;
+  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+footer nav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 39, 61);
+}
+footer nav a:visited {
+  color: rgb(0, 39, 61);
+}
+footer nav .link1 {
+  grid-column: 1/2;
+}
+footer nav .link2 {
+  grid-column: 2/3;
+}
+footer nav .link3 {
+  grid-column: 3/4;
+}
+
+.task-item {
+  background-color: red;
+  border-radius: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 body.darkmode {
-  background: rgb(6, 2, 17);
-  background: radial-gradient(circle, rgb(6, 2, 17) 15%, rgb(0, 0, 0) 73%);
+  background: rgb(0, 39, 61);
   background-repeat: no-repeat;
-  color: wheat;
+  color: rgb(196, 233, 255);
 }
 body.darkmode header {
-  background-color: rgb(32, 33, 36);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(196, 233, 255);
 }
 body.darkmode header img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(269deg) brightness(103%) contrast(103%);
 }
 body.darkmode footer {
-  background-color: rgb(32, 33, 36);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body.darkmode footer a {
+  color: rgb(196, 233, 255);
+}
+body.darkmode footer a:visited {
+  color: rgb(196, 233, 255);
 }
 body.darkmode footer img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(269deg) brightness(103%) contrast(103%);
+}
+
+main .taskBlocks {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+main .taskBlocks ul {
+  background: rgb(17, 4, 134);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 50px, rgba(0, 0, 0, 0.7) -5px 0px 250px;
+  background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+  transition: all 0.3s ease-in-out;
+  min-width: 25%;
+  text-align: center;
+  padding: 0;
+}
+main .taskBlocks ul:hover {
+  box-shadow: rgb(0, 0, 0) 5px 10px 50px, rgb(0, 0, 0) -5px 0px 250px;
+}
+main .taskBlocks.task-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
