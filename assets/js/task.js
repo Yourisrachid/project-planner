@@ -73,7 +73,9 @@ export function task() {
 
         function renderTodoList() {
 
+            const h2Element = todoList.querySelector('h2');
             todoList.innerHTML = "";
+            todoList.appendChild(h2Element);
 
             toDo.forEach(task => {
 
