@@ -20,22 +20,30 @@
     <main>
 
 
-      <input type="text" id="taskInput" placeholder="Nom de la tâche">
-    <input type="text" id="taskDescription" placeholder="Description de la tâche">
-    <button onclick="addTask()">Ajouter</button>
+        <button class="addItem" id="addItemButton">Ajouter</button>
 
-    <h2>To Do</h2>
-    <ul id="todoList"></ul>
+        <div id="taskForm" style="display: none;">
 
-    <h2>In Progress</h2>
-    <ul id="inProgressList"></ul>
+            <input type="text" id="taskInput" placeholder="Nom de la tâche">
+            <input type="text" id="taskDescription" placeholder="Description de la tâche">
+            <input type="date" id="taskDate" placeholder="Date limite de la tâche">
 
-    <h2>Done</h2>
-    <ul id="doneList"></ul>
+            <button id="submitButton">Submit</button>
+        </div>
+
+        <h2>To Do</h2>
+        <ul id="todoList"></ul>
+
+        <h2>In Progress</h2>
+        <ul id="inProgressList"></ul>
+
+        <h2>Done</h2>
+        <ul id="doneList"></ul>
 
    
 
- </main>
+    </main>
+
     <footer>
         <nav>
             <a href="https://github.com/lynekpng" target="_blank">Lyne</a>
@@ -48,6 +56,7 @@
         </a>
 
     </footer> 
-    <script src="assets/js/script.js" defer></script>
+
+    <script type="module" src="assets/js/script.js" defer></script>
 </body>
 </html>
