@@ -1,3 +1,8 @@
+body{
+    background-color:rgb(196, 233, 255) ;
+    color: rgb(0, 39, 61);
+}
+
 main {
     .taskBlocks {
         position: relative;
@@ -7,19 +12,33 @@ main {
         margin-right: 5%;
 
         ul {
-            background: rgb(17, 4, 134);
+            list-style:none; 
+            background: rgb(36, 59, 85);
             border-radius: 15px;
-            box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
+            box-shadow: rgba(0,0,0,0.7) 5px 10px 50px /*,rgb(0,0,0,0.7) -5px 0px 250px*/;
             background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
             transition: all 0.3s ease-in-out;
             min-width: 25%;
             text-align: center;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                color:rgb(196, 233, 255);
+            }
+
+            .task-item{
+                background-color: rgb(155, 219, 228);
+                width: 90%;
+                margin-bottom: 8px;
+                border-radius: 20px;   
+            }
         }
 
         
         ul:hover {
-            box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+            box-shadow: rgb(0,0,0) 5px 10px 50px /*,rgb(0,0,0) -5px 0px 250px*/;
         }
     
         &.task-item {
