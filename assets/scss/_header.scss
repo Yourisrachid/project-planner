@@ -11,6 +11,8 @@ header{
         width: 30%;
         max-width:175px;
         min-width: 100px;
+        padding-left: 25px;
+        max-height: 85%;
     }
 
     .darkModeDiv {
@@ -19,6 +21,7 @@ header{
         caret-color: transparent;
 	    display: block;
         align-items: center;
+        padding-right: 25px;
         img{
             max-height: 30px;
             height: 85%;
