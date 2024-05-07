@@ -85,7 +85,7 @@ export function task() {
                 const dueDate = document.createElement("p");
                 dueDate.textContent = task.date;
                 const days = document.createElement("p");
-                days.textContent = task.daysNum;
+                days.textContent = `Days left: ${task.daysNum}`;
 
 
                 taskDiv.appendChild(title);
