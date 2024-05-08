@@ -21,7 +21,7 @@ export function task() {
         const doneList = document.getElementById("doneList");
 
         addItemButton.addEventListener("click", function() {
-            taskForm.style.display = "block";
+            taskForm.style.display = "flex";
         });
 
         const submitButton = document.getElementById("submitButton");
