@@ -19,6 +19,23 @@
 
     <main>
 
+        <div class = "filter">
+
+            <input type="checkbox" id="all" class="category-checkbox" />
+            <label for="all"><img src="assets/img/all.svg" /></label>
+
+            <input type="checkbox" id="todo" class="category-checkbox" />
+            <label for="todo"><img src="assets/img/todo.svg" /></label>
+
+            <input type="checkbox" id="inprog" class="category-checkbox" />
+            <label for="inprog"><img src="assets/img/inprog.svg" /></label>
+                    
+            <input type="checkbox" id="done" class="category-checkbox" />
+            <label for="done"><img src="assets/img/done.svg" /></label>
+                
+
+        </div>
+
 
         <button class="addItem" id="addItemButton">Ajouter</button>
 
@@ -31,21 +48,21 @@
             <button id="submitButton">Submit</button>
         </div>
 
-        <div class="taskBlocks">
+        <div class="taskBlocks" id="taskBlocks">
 
-            <div class="block">
+            <div class="block" id="todo">
                 <h2>To Do</h2>
                 <ul id="todoList">
                 </ul>
             </div>
 
-            <div class="block">
+            <div class="block" id="inprog">
                 <h2>In Progress</h2>
                 <ul id="inProgressList">
                 </ul>
             </div>
 
-            <div class="block">
+            <div class="block" id="done">
                 <h2>Done</h2>
                 <ul id="doneList">
                 </ul>

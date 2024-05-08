@@ -1,0 +1,28 @@
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin: 7% auto 5%;
+
+    label{
+        text-align: center;
+    }
+
+    input {
+        display: none;
+
+        &:checked + label {
+            img{
+                // filter: invert(100%) sepia(100%) saturate(0.5) hue-rotate(45deg);
+                filter: invert(400%) sepia(150%) saturate(100%) hue-rotate(340deg) brightness(500%) contrast(200%);
+            }
+        }
+    }
+
+    img {
+        width: 50%;
+        cursor: pointer;
+    }
+}

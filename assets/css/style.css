@@ -162,4 +162,25 @@ main .taskBlocks.task-item {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  margin: 7% auto 5%;
+}
+.filter label {
+  text-align: center;
+}
+.filter input {
+  display: none;
+}
+.filter input:checked + label img {
+  filter: invert(400%) sepia(150%) saturate(100%) hue-rotate(340deg) brightness(500%) contrast(200%);
+}
+.filter img {
+  width: 50%;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
