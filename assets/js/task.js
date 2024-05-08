@@ -4,6 +4,15 @@ export function task() {
     let done = [];
     let daysDiff = 0;
 
+
+    const now = new Date();
+    const isoDateString = now.toISOString();
+    const minDate = isoDateString.substring(0, 10);
+
+    const inputDate = document.querySelector('#taskDate');
+
+    inputDate.setAttribute('min', minDate);
+
     document.addEventListener("DOMContentLoaded", function() {
         const addItemButton = document.getElementById("addItemButton");
         const taskForm = document.getElementById("taskForm");
@@ -113,6 +122,8 @@ export function task() {
             }
         }
         
+
+
         
         function getElapsedTime() {
             const now = new Date();
