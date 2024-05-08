@@ -1,7 +1,7 @@
 export function task() {
 
 
-    let toDo = [];
+    let toDo = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : [] ;
     let inProgress = [];
     let done = [];
     let daysDiff = 0;
@@ -61,8 +61,8 @@ export function task() {
                 daysNum: daysDiff
             };
 
-
             toDo.push(task);
+            localStorage.setItem('task', JSON.stringify(toDo)) ;
 
 
             taskForm.style.display = "none";
@@ -70,6 +70,7 @@ export function task() {
 
             renderTodoList();
         });
+        renderTodoList() ;
 
         function renderTodoList() {
 
