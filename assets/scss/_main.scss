@@ -16,7 +16,7 @@ main {
         .block {
             margin-bottom: 5%;
             margin-top: 5%;
-            background: rgb(17, 4, 134);
+            background: rgb(36, 59, 85);
             border-radius: 15px;
             box-shadow: rgba(0,0,0,0.7) 5px 10px 50px;
             background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
@@ -26,17 +26,36 @@ main {
             text-align: center;
 
 
+            h2{
+                color:rgb(196, 233, 255);
+            }
+
+            
+
             ul {
                 padding: 0;
+                display: flex;
+            	flex-direction: column;
+            	align-items: center;
                 min-height: 100px;
                 max-height: 300px;
                 overflow-y: auto;
+                .task-item{
+                    background-color: rgb(155, 219, 228);
+                    width: 90%;
+                    margin-bottom: 8px;
+                    border-radius: 20px;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+                
             }
         }
 
         
         .block:hover {
-            box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+            box-shadow: rgb(0,0,0) 5px 10px 50px;
         }
     
         &.task-item {
