@@ -3,6 +3,9 @@ button{
     border-radius: 5px;
     padding: 8px;
     border: none;
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 #addItemButton{
     
@@ -11,8 +14,36 @@ button{
     margin-left: 5%;
     margin-top: 10px;
 }
-#taskform{
+#taskForm{
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    border-radius: 25px;
+    min-width: 280px;
+    max-height: 300px;
+    padding: 15px;
     background-color: rgb(36, 59, 85);
-    // position:sticky;
-    margin: auto;
+    z-index: 20;
+    position:fixed;
+    color: rgb(196, 233, 255); 
+    #submitButton{
+        color: rgb(0, 39, 61);
+        background-color: rgb(155, 219, 228);
+        width: 60%;
+        align-self: center;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    input{
+        background-color: rgb(196, 233, 255);
+        color:rgb(0, 39, 61);
+        margin-bottom: 12px;
+        // word-wrap: break-word;
+        // word-break: break-all;
+        // min-width: 100px;
+        // width:fit-content;
+        height: fit-content;
+    }
 }

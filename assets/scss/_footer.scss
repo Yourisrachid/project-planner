@@ -28,6 +28,9 @@ footer{
             &:visited{
                 color:rgb(0, 39, 61);
             }
+            &:hover{
+               transform: scale(1.1); 
+            }
 
         }
         .link1{grid-column: 1/2;}
