@@ -1,6 +1,8 @@
 body{
     background-color:rgb(196, 233, 255) ;
     color: rgb(0, 39, 61);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 main {
@@ -10,6 +12,7 @@ main {
         justify-content: space-around;
         margin-left: 5%;
         margin-right: 5%;
+        min-height:67.5dvh;
 
         ul {
             list-style:none; 
