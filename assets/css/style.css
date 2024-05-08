@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Cagliostro&display=swap");
 body {
   margin: 0;
   overflow-x: hidden;
+}
+
+body, button {
+  font-family: "Cagliostro", sans-serif;
+}
+
+h2, h3 {
+  font-family: "Aclonica", sans-serif;
 }
 
 header {
@@ -47,8 +56,6 @@ header .darkModeDiv input:checked ~ .img-unchecked {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -76,6 +83,9 @@ footer nav a {
 footer nav a:visited {
   color: rgb(0, 39, 61);
 }
+footer nav a:hover {
+  transform: scale(1.1);
+}
 footer nav .link1 {
   grid-column: 1/2;
 }
@@ -84,6 +94,53 @@ footer nav .link2 {
 }
 footer nav .link3 {
   grid-column: 3/4;
+}
+
+button {
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+#addItemButton {
+  background-color: rgb(36, 59, 85);
+  color: rgb(196, 233, 255);
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+#taskForm {
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  min-width: 280px;
+  max-height: 300px;
+  padding: 15px;
+  background-color: rgb(36, 59, 85);
+  z-index: 20;
+  position: fixed;
+  color: rgb(196, 233, 255);
+}
+#taskForm #submitButton {
+  color: rgb(0, 39, 61);
+  background-color: rgb(155, 219, 228);
+  width: 60%;
+  align-self: center;
+}
+#taskForm #submitButton:hover {
+  transform: scale(1.05);
+}
+#taskForm input {
+  background-color: rgb(196, 233, 255);
+  color: rgb(0, 39, 61);
+  margin-bottom: 12px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body.darkmode {
@@ -98,19 +155,31 @@ body.darkmode header {
 body.darkmode header img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(269deg) brightness(103%) contrast(103%);
 }
-body.darkmode main ul {
+body.darkmode main .block {
   background-color: rgb(155, 219, 228);
   box-shadow: rgba(255, 255, 255, 0.2) 5px 10px 50px;
   background: linear-gradient(to right, rgb(155, 219, 228), rgb(196, 233, 255));
 }
-body.darkmode main ul h2 {
+body.darkmode main .block h2 {
   color: rgb(0, 39, 61);
 }
-body.darkmode main ul ul:hover {
+body.darkmode main .block .block:hover {
   box-shadow: rgb(255, 255, 255) 5px 10px 50px;
 }
-body.darkmode main ul .task-item {
+body.darkmode main .block ul .task-item {
   background-color: rgb(36, 59, 85);
+}
+body.darkmode main #addItemButton {
+  background-color: rgb(155, 219, 228);
+  color: rgb(0, 39, 61);
+}
+body.darkmode main #taskForm {
+  background-color: rgb(155, 219, 228);
+  color: rgb(0, 39, 61);
+}
+body.darkmode main #taskForm #submitButton {
+  background-color: rgb(36, 59, 85);
+  color: rgb(196, 233, 255);
 }
 body.darkmode footer {
   background-color: rgba(255, 255, 255, 0.1);
@@ -128,6 +197,8 @@ body.darkmode footer img {
 body {
   background-color: rgb(196, 233, 255);
   color: rgb(0, 39, 61);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main .taskBlocks {
@@ -135,11 +206,12 @@ main .taskBlocks {
   justify-content: space-around;
   margin-left: 5%;
   margin-right: 5%;
+  min-height: 67.5dvh;
 }
 main .taskBlocks .block {
   margin-bottom: 5%;
   margin-top: 5%;
-  background: rgb(17, 4, 134);
+  background: rgb(36, 59, 85);
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 50px;
   background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
@@ -148,14 +220,29 @@ main .taskBlocks .block {
   width: 25%;
   text-align: center;
 }
+main .taskBlocks .block h2 {
+  color: rgb(196, 233, 255);
+}
 main .taskBlocks .block ul {
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100px;
   max-height: 300px;
   overflow-y: auto;
 }
+main .taskBlocks .block ul .task-item {
+  background-color: rgb(155, 219, 228);
+  width: 90%;
+  margin-bottom: 8px;
+  border-radius: 20px;
+}
+main .taskBlocks .block ul .task-item:hover {
+  transform: scale(1.05);
+}
 main .taskBlocks .block:hover {
-  box-shadow: rgb(0, 0, 0) 5px 10px 50px, rgb(0, 0, 0) -5px 0px 250px;
+  box-shadow: rgb(0, 0, 0) 5px 10px 50px;
 }
 main .taskBlocks.task-item {
   display: flex;
