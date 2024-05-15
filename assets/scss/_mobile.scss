@@ -1,0 +1,13 @@
+@media screen and (max-width: 1023px) {
+
+
+    main {
+        .taskBlocks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height:67.5dvh;
+        }
+    }
+
+}

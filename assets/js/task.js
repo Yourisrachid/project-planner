@@ -155,42 +155,21 @@ export function task() {
             }
         }
 
+        const sortTasksButton = document.querySelector("#sortTasksButton");
+        sortTasksButton.addEventListener("click", sortTasksByDueDate);
+
+
+        
+        function sortTasksByDueDate() {
+            toDo.sort((a, b) => a.daysNum - b.daysNum);
+            inProgress.sort((a, b) => a.daysNum - b.daysNum);
+            done.sort((a, b) => a.daysNum - b.daysNum);
+            console.log('test')
+        
+            renderTodoList();
+        }
+    
+
     });
     
 }
-
-
-
-// function moveTask(task) {
-//     switch (task.state) {
-//         case 'todo':
-            
-//             todoTasks = todoTasks.filter(t => t.id !== task.id);
-//             inProgressTasks.push(task);
-//             break;
-//         case 'inprogress':
-            
-//             inProgressTasks = inProgressTasks.filter(t => t.id !== task.id);
-//             doneTasks.push(task);
-//             break;
-//         case 'done':
-            
-//             return;
-//     }
-
-//     renderTasks();
-// }
-
-
-/*function setDate() {
-    const head = document.createElement('h1');
-
-    button.addEventListener('click', function() {
-        head.textContent = getElapsedTime();
-    });
-
-    document.body.appendChild(head);
-}
-*/
-
-

@@ -100,6 +100,7 @@ button {
   border-radius: 5px;
   padding: 8px;
   border: none;
+  margin-left: 7px;
 }
 button:hover {
   transform: scale(1.1);
@@ -110,6 +111,7 @@ button:hover {
   color: rgb(196, 233, 255);
   margin-left: 5%;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #taskForm {
@@ -126,6 +128,16 @@ button:hover {
   position: fixed;
   color: rgb(196, 233, 255);
 }
+#taskForm #closeFormButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
 #taskForm #submitButton {
   color: rgb(0, 39, 61);
   background-color: rgb(155, 219, 228);
@@ -141,6 +153,12 @@ button:hover {
   margin-bottom: 12px;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+#sortTasksButton {
+  background-color: rgb(36, 59, 85);
+  color: rgb(196, 233, 255);
+  cursor: pointer;
 }
 
 body.darkmode {
@@ -173,9 +191,14 @@ body.darkmode main #addItemButton {
   background-color: rgb(155, 219, 228);
   color: rgb(0, 39, 61);
 }
-body.darkmode main #taskForm {
+body.darkmode main #sortTasksButton {
   background-color: rgb(155, 219, 228);
   color: rgb(0, 39, 61);
+  cursor: pointer;
+}
+body.darkmode main #taskForm {
+  background-color: rgb(18, 30, 44);
+  color: rgb(155, 219, 228);
 }
 body.darkmode main #taskForm #submitButton {
   background-color: rgb(36, 59, 85);
@@ -270,4 +293,13 @@ main .taskBlocks.task-item {
 .filter img {
   width: 50%;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  main .taskBlocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 67.5dvh;
+  }
 }/*# sourceMappingURL=style.css.map */
