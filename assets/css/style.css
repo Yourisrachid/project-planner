@@ -260,6 +260,7 @@ main .taskBlocks .block ul .task-item {
   width: 90%;
   margin-bottom: 8px;
   border-radius: 20px;
+  line-height: 70%;
 }
 main .taskBlocks .block ul .task-item:hover {
   transform: scale(1.05);
@@ -272,6 +273,14 @@ main .taskBlocks.task-item {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
 }
 
 .filter {
