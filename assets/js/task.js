@@ -60,8 +60,18 @@ export function task() {
                 taskDiv.classList.add("task-item");
                 taskDiv.draggable = true;
                 taskDiv.dataset.id = `task-${index}`;
-
+        
                 taskDiv.addEventListener("dragstart", dragStart);
+        
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "❌";
+                deleteButton.classList.add("delete-button");
+                deleteButton.addEventListener("click", function() {
+ 
+                    tasks.splice(index, 1);
+
+                    renderTodoList();
+                });
         
                 const title = document.createElement("h3");
                 title.textContent = task.name;
@@ -72,10 +82,12 @@ export function task() {
                 const days = document.createElement("p");
                 days.textContent = `Days left: ${task.daysNum}`;
         
+
                 taskDiv.appendChild(title);
                 taskDiv.appendChild(description);
                 taskDiv.appendChild(dueDate);
                 taskDiv.appendChild(days);
+                taskDiv.appendChild(deleteButton);
         
                 list.appendChild(taskDiv);
         
@@ -155,17 +167,14 @@ export function task() {
             }
         }
 
-        const sortTasksButton = document.querySelector("#sortTasksButton");
+        const sortTasksButton = document.getElementById("sortTasksButton");
         sortTasksButton.addEventListener("click", sortTasksByDueDate);
-
-
-        
+    
         function sortTasksByDueDate() {
-            toDo.sort((a, b) => a.daysNum - b.daysNum);
-            inProgress.sort((a, b) => a.daysNum - b.daysNum);
-            done.sort((a, b) => a.daysNum - b.daysNum);
-            console.log('test')
-        
+            toDo.sort((a, b) => new Date(a.date) - new Date(b.date));
+            inProgress.sort((a, b) => new Date(a.date) - new Date(b.date));
+            done.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
             renderTodoList();
         }
     
@@ -173,3 +182,39 @@ export function task() {
     });
     
 }
+
+
+
+// function moveTask(task) {
+//     switch (task.state) {
+//         case 'todo':
+            
+//             todoTasks = todoTasks.filter(t => t.id !== task.id);
+//             inProgressTasks.push(task);
+//             break;
+//         case 'inprogress':
+            
+//             inProgressTasks = inProgressTasks.filter(t => t.id !== task.id);
+//             doneTasks.push(task);
+//             break;
+//         case 'done':
+            
+//             return;
+//     }
+
+//     renderTasks();
+// }
+
+
+/*function setDate() {
+    const head = document.createElement('h1');
+
+    button.addEventListener('click', function() {
+        head.textContent = getElapsedTime();
+    });
+
+    document.body.appendChild(head);
+}
+*/
+
+
