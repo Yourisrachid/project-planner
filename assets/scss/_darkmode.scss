@@ -37,9 +37,16 @@ body {
                 background-color: rgb(155, 219, 228);
                 color: rgb(0, 39, 61);
             }
-            #taskForm{
+
+            #sortTasksButton {
                 background-color: rgb(155, 219, 228);
                 color: rgb(0, 39, 61);
+                cursor: pointer;
+            }
+            
+            #taskForm{
+                background-color: rgb(18, 30, 44);
+                color: rgb(155, 219, 228);
                 #submitButton{
                 background-color: rgb(36, 59, 85);
                 color: rgb(196, 233, 255);

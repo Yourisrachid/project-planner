@@ -1,11 +1,11 @@
 import { darkMode } from './darkmode.js';
 import { task } from './task.js';
-//import { swipe } from './swipemobile.js' ;
 import { filter } from './filter.js' ;
+import { closeForm } from './closeform.js';
 
 
 
 darkMode();
 task();
-//swipe() ;
 filter() ;
+closeForm();
