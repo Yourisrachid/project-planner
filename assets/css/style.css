@@ -297,7 +297,7 @@ main .taskBlocks.task-item {
   display: none;
 }
 .filter input:checked + label img {
-  filter: invert(400%) sepia(150%) saturate(100%) hue-rotate(340deg) brightness(500%) contrast(200%);
+  filter: invert(40%) sepia(95%) saturate(625%) hue-rotate(1deg) brightness(97%) contrast(103%);
 }
 .filter img {
   width: 50%;
